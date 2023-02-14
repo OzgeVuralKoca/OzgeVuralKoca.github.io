@@ -288,9 +288,9 @@
 }
 
 .about .aboutarticle .col h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: var(--third-color);
-    text-shadow: 2px 1px 3px rgba(105, 104, 104, 0.993);
+    text-shadow: 2px 1px 5px rgba(58, 58, 58, 0.562);
 }
 
 .about .aboutarticle .col h2 .span {
@@ -299,10 +299,10 @@
 
 .about .aboutarticle .right .aboutp {
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--first-color);
     text-align: justify;
-    text-shadow: 2px 1px 3px rgba(105, 104, 104, 0.993);
+    margin-top: 20px;
 }
 
 /* SKILLS SECTION STYLE */
@@ -386,7 +386,7 @@
 }
 
 .blog .max-width .profil .name{
-    margin: 40px;
+    margin: 35px;
 }
 
 .blog .max-width .title {
@@ -399,8 +399,6 @@
     color: #E6E6FA;
     /* margin: 0 50px; */
 }
-
-
 
 /* CARDS */
 
@@ -635,20 +633,6 @@
         width: 300px;
 
     }
-
-    .about .aboutarticle .col h2 {
-        font-size: 1.4em;
-        color: var(--third-color)
-    }
-
-    .about .aboutarticle .right .aboutp {
-        margin-top: 20px;
-        font-size: 1em;
-        font-weight: 600;
-        color: var(--background-color);
-        text-align: justify;
-    }
-
 }
 
 
@@ -667,6 +651,7 @@
         display: flex;
         justify-content: center;
         margin: 0 auto 30px;
+        border-right: none;
     }
 
     .about .aboutarticle .right {
@@ -682,9 +667,11 @@
     }
 
     .about .aboutarticle .col h2 {
-        font-size: 1.2em;
-        color: var(--third-color);
         text-align: center;
+    }
+
+    .blog .followme {
+        display: none;
     }
 
     .skills .skillsarticle .left {
@@ -746,23 +733,10 @@
         box-shadow: 2px 3px 4px var(--background-color-light);
     }
 
-    .about .aboutarticle .col h2 {
-        font-size: 1.2em;
-        color: var(--third-color)
-    }
-
-    .about .aboutarticle .right .aboutp {
-        margin-top: 20px;
-        font-size: 13px;
-        font-weight: 500;
-        color: var(--background-color);
-        text-align: justify;
-        width: 100%;
-    }
-
     .about .aboutarticle .col img {
         margin: auto;
     }
+
 }
 
 @media (max-width: 500px) {
