@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
+.main {
     height: 100vh;
     background-color: #db8c16;
 }

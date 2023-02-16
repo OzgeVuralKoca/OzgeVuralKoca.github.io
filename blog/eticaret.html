@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce App v.1.0</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/630dbfc933.js" crossorigin="anonymous"></script>
+
+    <style>
+        .hidden {
+            visibility: hidden
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">E-Ticaret</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Kategoriler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Teknoloji</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Ev ve Yaşam</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Tekstil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Gıda</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#orderModal"
+                            onclick="showMyOrder()">
+                            Siparişler
+                            <span class="badge bg-danger" id="OrderSpanCount"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control bg-dark-subtle" type="search" placeholder="ürün ara.."
+                        aria-label="Search">
+                    <button class="btn btn-outline-dark ms-3" type="submit">Ara</button>
+                </form>
+                <button type="button" onclick="setBasketModalTable()" data-bs-toggle="modal"
+                    data-bs-target="#basketModal" class="btn btn-outline-dark position-relative mx-3">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span id="basketSpanElement"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <span id="basketcount"></span>
+                        <span class="visually-hidden"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAROUSEL -->
+    <div id="carouselExampleIndicators" class="carousel slide w-70 mx-auto my-5">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://m.media-amazon.com/images/I/71p3DPqK8qL._AC_SX425_.jpg" class="d-block w-80 mx-auto"
+                    alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/71v0Qf+ih5L._AC_SX425_.jpg" class="d-block w-80 mx-auto"
+                    alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/71BIDGROcwL._AC_SX425_.jpg" class="d-block w-80 mx-auto"
+                    alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Sidebar + Products -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- SIDEBAR -->
+            <div class="col-2 bg-warning h-50">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <p class="nav-link active text-dark border-bottom border-3" aria-current="page" href="#">
+                            KATEGORİLER</p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Elektronik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Giyim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Ev Yaşam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Çok Satan Ürünler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Son Kalan Ürünler</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container col-10 text-center" id="product">
+
+                <!-- PRODUCT CARDS -->
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Basket Modal -->
+    <div class="modal fade" id="basketModal">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sepetim</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="basketModalCloseBtnn">
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <table class="table table-bordered" id="baskettable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Ürün Adı</th>
+                                <th>Ürün Resmi</th>
+                                <th>Ürün Adeti</th>
+                                <th>Fiyat</th>
+                                <th>Toplam</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary" id="paymentbutton" onclick="pay()">
+                        Ödeme Yap
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Siparişlerim</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="orderModalCloseBtnn">
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <table class="table table-bordered" id="ordertable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Sipariş Tarihi</th>
+                                <th>Ürünler</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordertbody">
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer bg-warning py-4 text-center">
+        <footer class="blockquote-footer my-auto h1 fs-5">Created by <cite title="Source Title"> ozgevuralkoca.
+            </cite>2023
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"> </script>
+    <script src="./pages/eticaret/script.js"></script>
+</body>
+
+</html>

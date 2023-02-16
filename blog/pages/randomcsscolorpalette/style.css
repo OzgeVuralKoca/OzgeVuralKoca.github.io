@@ -4,10 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
+.main {
     font-family: 'Poppins', sans-serif;
+    height: 100vh;
     text-align: center;
     padding: 50px 0;
     background-color: #2222;
@@ -22,6 +24,7 @@ h1 {
     font-weight: 600;
     font-size: 3em;
     box-shadow: 2px 2px 5px #222222;
+    margin-bottom: 50px;
 }
 
 button {

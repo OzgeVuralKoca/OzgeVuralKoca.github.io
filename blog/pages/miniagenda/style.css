@@ -4,9 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
-body {
+.main {
     font-family: 'Quicksand', sans-serif;
     height: 100vh;
     padding: 50px;
