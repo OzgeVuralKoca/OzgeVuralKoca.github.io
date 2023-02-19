@@ -9,8 +9,8 @@
     --third-color: #d15108;
     --third-color-light: #5b2169;
     --fourth-color: #dab6da;
-    --background-color: #0f0e0e;
-    --background-color-light: #452961;
+    --background-color: #181717;
+    --background-color-light: #3f3e3f;
 }
 
 * {
@@ -20,6 +20,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    /* background-color: var(--background-color); */
 }
 
 .max-width {
@@ -49,6 +50,7 @@
     position: fixed;
     padding: 15px 0;
     transition: all 0.5s ease;
+    z-index: 6;
 }
 
 .navbar.sticky {
@@ -125,6 +127,13 @@
 }
 
 /* HOME SECTION STYLE */
+.homeimage {
+    z-index: 3;
+    position: absolute;
+    bottom: 60px;
+    right: 200px;
+    max-width: 320px;
+}
 
 .home {
     display: flex;
@@ -134,6 +143,90 @@
     /* background-image: url(../images/profil.jpg);
     background-size: cover;
     background-position: center; */
+}
+
+.home .circle {
+    z-index: 2;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    /* border-radius: 50%; */
+    background-color: var(--third-color);
+    bottom: 60px;
+    right: 180px;
+    box-shadow: 10px 10px 10px var(--background-color-light);
+}
+
+.home .hoop {
+    z-index: 2;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px groove var(--second-color);
+    top: 120px;
+    left: 250px;
+    border-style: groove;
+}
+
+.home .hoop:hover {
+    background-color: var(--second-color);
+    border: none;
+    box-shadow: 1px 1px 5px var(--fourth-color);
+}
+
+.home .cross {
+    z-index: 2;
+    position: absolute;
+    width: 40px;
+    border: 2px solid var(--third-color);
+    top: 600px;
+    left: 100px;
+    border-radius: 2px;
+}
+
+.home .cross2 {
+    z-index: 2;
+    position: absolute;
+    height: 40px;
+    border: 2px solid var(--third-color);
+    top: 576px;
+    left: 124px;
+    border-radius: 2px;
+}
+
+.home .cross:hover {
+    border-style: outset;
+    top: 600px;
+    left: 112px;
+    border-radius: 2px;
+}
+
+.home .square {
+    z-index: 2;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 2px solid var(--fourth-color);
+    top: 470px;
+    left: 500px;
+    border-radius: 2px;
+}
+
+.home .square2 {
+    z-index: 2;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: var(--background-color-light);
+    top: 455px;
+    left: 515px;
+    border-radius: 2px;
+}
+
+.home .square2:hover,
+.home .square:hover {
+    background-color: var(--fourth-color);
 }
 
 .home .max-width {
@@ -324,14 +417,14 @@
     width: 226px;
     height: 150px;
     margin: 2%;
-    background: linear-gradient(0deg,
-            rgb(255, 255, 255),
-            rgba(255, 255, 255, 0.692));
-    box-shadow: 5px 8px 6px rgba(0, 0, 0, 0.747);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: linear-gradient(150deg,
+            var(--background-color),
+            var(--background-color-light)
+    );
+    border: 5px solid rgba(0, 0, 0, .4);
     padding: 1em 2em;
     margin-bottom: 50px;
-    color: var(--background-color);
+    color: var(--third-color);
     text-align: center;
     justify-items: center;
     padding: 10px
@@ -356,14 +449,18 @@
     margin-top: 10px;
 }
 
-.skills .skillsarticle .right li {
-    padding: 5px 20px;
+.skills .skillsarticle .right ul {
     text-align: center;
-    background: linear-gradient(0deg,
-            rgba(204, 181, 160, 0.637),
-            rgb(255, 255, 255));
-    box-shadow: 5px 8px 6px rgba(0, 0, 0, 0.747);
-    color: var(--background-color);
+    background: linear-gradient(150deg,
+            var(--background-color),
+            var(--background-color-light)
+    );
+    border: 5px solid rgba(0, 0, 0, .4);
+}
+
+.skills .skillsarticle .right ul li{
+    padding: 5px 20px;
+    border-bottom: 1px solid var(--background-color);
 }
 
 /* BLOG STYLE */
@@ -385,7 +482,7 @@
     border-bottom: 1px solid var(--fourth-color);
 }
 
-.blog .max-width .profil .name{
+.blog .max-width .profil .name {
     margin: 35px;
 }
 
@@ -507,17 +604,26 @@
 }
 
 .contact .contactarticle .col {
-    width: 50%;
+    width: 100%;
+}
+
+.contact .contactarticle .left{
+    margin-bottom: 50px;
+    color: var(--third-color);
+}
+
+.contact .contactarticle .left ul{
+    margin: auto;
+    width: 80%;
+    background: linear-gradient(150deg,
+            var(--background-color),
+            var(--background-color-light)
+    );
+    display: flex;
 }
 
 .contact .contactarticle .left li {
-    margin: 20px 15%;
-    background: linear-gradient(0deg,
-            rgba(107, 107, 107, 0.2),
-            rgba(255, 255, 255, 0.4));
-    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: var(--first-color);
+    margin: auto;
     padding: 10px 10px;
 }
 
@@ -526,32 +632,39 @@
     flex-direction: column;
     width: 80%;
     margin: auto;
-    background: linear-gradient(0deg,
-            rgba(107, 107, 107, 0.2),
-            rgba(255, 255, 255, 0.4));
-    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(10px);
-    border-radius: 3px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 1em 2em;
 }
 
 .contact .contactarticle .right form input,
-.contact .contactarticle .right form textarea,
-.contact .contactarticle .right form button {
+.contact .contactarticle .right form textarea {
     padding: 10px;
-    margin-bottom: 10px;
-    outline: none;
+    width: 100%;
     border-style: none;
     cursor: pointer;
-    background-color: var(--background-color-light);
+    background-color: var(--background-color);
     color: var(--first-color);
     font-weight: 600;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.747);
+    border-bottom: 3px solid var(--third-color) ;
+    border-radius: 5px;
+}
+
+.contact .contactarticle .right form button {
+    background-color: var(--third-color);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--first-color);
+    font-size: 1em;
+    box-shadow: 2px 2px 5px #0000006c;
 }
 
 .contact .contactarticle .right form button:hover {
-    background-color: var(--third-color-light);
+    background-color: var(--background-color-light);
 }
 
 /* FOOTER STYLE */
@@ -695,6 +808,10 @@
         margin: auto;
     }
 
+    .contact .contactarticle .left ul{
+    width: 100%;
+}
+
     .contact .contactarticle .left li {
         text-align: center;
     }
@@ -702,6 +819,10 @@
     .contact .contactarticle .left li h3,
     .contact .contactarticle .left li h4 {
         font-weight: 600;
+    }
+
+    .contact .contactarticle .right {
+        margin-top: 50px;
     }
 }
 

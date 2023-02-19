@@ -64,7 +64,7 @@ function showProducts() {
         element += `
         <div class="col-md-3">
         <div class="card mb-4">
-            <img src="${products[i].image}" class="card-img-top mx-auto mt-1" alt="...">
+            <img src="${products[i].image}" class="card-img-top m-auto mt-1 img-fluid" alt="product">
             <div class="card-body">
                 <h5 class="card-title">${products[i].name}</h5>
                 <span class="card-text">Fiyat: ${products[i].price} ₺</span>
@@ -77,10 +77,22 @@ function showProducts() {
     }
     element += `</div>`;
 
-    let pdoructsElement = document.getElementById("product");
-    pdoructsElement.innerHTML = element;
+    let productsElement = document.getElementById("product");
+    productsElement.innerHTML = element;
 
 }
+
+// function setBasketCount() {
+//     let element = document.getElementById("basketcount");
+//     if (baskets.length == 0) {
+//         document.getElementById("basketSpanElement").className += "hidden"
+//         element.className += "hidden"
+//     } else {
+//         document.getElementById("basketSpanElement").className = "position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger";
+//         element.className = ""
+//     }
+//     element.innerText = baskets.length
+// }
 
 function setBasketCount() {
     let element = document.getElementById("basketcount");
@@ -91,13 +103,28 @@ function setBasketCount() {
         document.getElementById("basketSpanElement").className = "position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger";
         element.className = ""
     }
-    element.innerText = baskets.length
+    const totalQuantity = baskets.reduce((acc, cur) => acc + cur.quantity, 0);
+    element.innerText = totalQuantity;
 }
 
 function addBasket(index) {
-    baskets.push(products[index]);
-    setBasketCount();
-    checkBasketCountForPaymentButton();
+    let product = products[index];
+    let existingBasket = baskets.find(basketProduct => basketProduct.name === product.name);
+
+    if (product.stock > 0) {
+        if (existingBasket) {
+            existingBasket.quantity++;
+        } else {
+            baskets.push({ ...product, quantity: 1 });
+        }
+        products[index].stock--;
+        setBasketCount();
+        setBasketModalTable();
+        checkBasketCountForPaymentButton();
+        showProducts()
+    } else {
+        alert("Stokta yeterli ürün yok!");
+    }
 }
 
 function setBasketModalTable() {
@@ -109,7 +136,7 @@ function setBasketModalTable() {
             <td>${i + 1}</td>
             <td>${baskets[i].name}</td>
             <td><img src="${baskets[i].image}" width="50"</td>
-            <td>1</td>
+            <td>${baskets[i].quantity}</td>
             <td>${baskets[i].price}</td>
             <td>${baskets[i].price * 1}</td>
             <td>
@@ -120,17 +147,28 @@ function setBasketModalTable() {
         </tr>
         `
     }
-
     body.innerHTML = element
 }
 
 function removeBasketById(index) {
-    baskets.splice(index, 1);
+    let existingBasket = baskets[index];
+
+    if (existingBasket.quantity > 0) {
+        existingBasket.quantity--;
+        let product = products.find(product => product.name === existingBasket.name);
+        product.stock++;
+    } else {
+        baskets.splice(index, 1);
+        let product = products.find(product => product.name === existingBasket.name);
+        product.stock++;
+    }
     setBasketCount();
-    let trElement = document.getElementById("trElement" + index);
-    console.log(trElement.remove());
+    setBasketModalTable();
     checkBasketCountForPaymentButton();
+    showProducts();
 }
+
+
 
 function checkBasketCountForPaymentButton() {
     let paymentButton = document.getElementById("paymentbutton");
@@ -150,8 +188,8 @@ function checkBasketCountForPaymentButton() {
 }
 
 function pay() {
-    let total =0;
-    baskets.forEach(element=>{
+    let total = 0;
+    baskets.forEach(element => {
         total += element.price;
     })
     let order = {
@@ -169,6 +207,8 @@ function pay() {
     setOrderSpanCount();
     let modalCloseBtn = document.getElementById("basketModalCloseBtnn")
     modalCloseBtn.click();
+
+    setBasketCount()
 }
 
 function setOrderSpanCount() {
@@ -181,7 +221,7 @@ function showMyOrder() {
 
     let element = "";
     for (let i = 0; i < orders.length; i++) {
-        let date =  orders[i].date.getDate()+"."+orders[i].date.getMonth()+"."+orders[i].date.getFullYear() + " " + orders[i].date.getHours()+":"+orders[i].date.getMinutes()+":"+orders[i].date.getSeconds();
+        let date = orders[i].date.getDate() + "." + orders[i].date.getMonth() + "." + orders[i].date.getFullYear() + " " + orders[i].date.getHours() + ":" + orders[i].date.getMinutes() + ":" + orders[i].date.getSeconds();
 
         element += `
         <tr>
@@ -201,9 +241,9 @@ function showMyOrder() {
                     </thead>
                     <tbody>
                     `
-                    let products = "";
-                    for (let x = 0; x < orders[i].baskets.length; x++) {
-                        products +=  `
+        let products = "";
+        for (let x = 0; x < orders[i].baskets.length; x++) {
+            products += `
                         <tr>
                             <td>${x + 1}</td>
                             <td>${orders[i].baskets[x].name}</td>
@@ -213,8 +253,8 @@ function showMyOrder() {
                             <td>${orders[i].baskets[x].price * 1}</td>
                         </tr>
                         `
-                    }
-                    element += products;
+        }
+        element += products;
         element += `
                         <tr class="alert alert-danger">
                             <td colspan="5">Toplam</td>
