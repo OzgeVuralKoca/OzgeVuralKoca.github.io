@@ -841,6 +841,7 @@
 }
 
 @media (max-width: 687px) {
+
     .homeimage,
     .home .circle {
         display: none;
@@ -848,6 +849,16 @@
 }
 
 @media (max-width: 600px) {
+    .home .square {
+        left: 75%;
+        border-radius: 5px;
+    }
+
+    .home .square2 {
+        left: 78%;
+        border-radius: 5px;
+    }
+
     .max-width {
         padding: 0 20px;
     }
