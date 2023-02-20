@@ -683,9 +683,9 @@
     .homeimage {
         z-index: 3;
         position: absolute;
-        bottom: 200px;
+        top: 20%;
         right: 20px;
-        max-width: 220px;
+        width: 220px;
     }
 
     .home .circle {
@@ -695,7 +695,7 @@
         height: 300px;
         /* border-radius: 50%; */
         background-color: var(--third-color);
-        bottom: 200px;
+        top:30%;
         right: 20px;
         box-shadow: 10px 10px 10px var(--background-color-light);
     }
