@@ -1,5 +1,4 @@
 let products = [];
-
 let baskets = [];
 let orders = [];
 
@@ -9,6 +8,7 @@ const getProducts = async () => {
     products = productList;
     showProducts();
 }
+
 
 getProducts()
 showProducts();
