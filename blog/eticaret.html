@@ -11,10 +11,26 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/630dbfc933.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 
     <style>
         .hidden {
             visibility: hidden
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            ;
+        }
+
+        .card-title {
+            height: 100px;
+            overflow: hidden;
         }
     </style>
 
@@ -22,137 +38,140 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-warning">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">E-Ticaret</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Kategoriler
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Teknoloji</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Ev ve Yaşam</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Tekstil</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Gıda</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#orderModal"
-                            onclick="showMyOrder()">
-                            Siparişler
-                            <span class="badge bg-danger" id="OrderSpanCount"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control bg-dark-subtle" type="search" placeholder="ürün ara.."
-                        aria-label="Search">
-                    <button class="btn btn-outline-dark ms-3" type="submit">Ara</button>
-                </form>
-                <button type="button" onclick="setBasketModalTable()" data-bs-toggle="modal"
-                    data-bs-target="#basketModal" class="btn btn-outline-dark position-relative mx-3">
-                    <i class="fa-solid fa-basket-shopping"></i>
+    <nav class="navbar navbar-expand-lg px-5 bg-warning">
+        <div class="container container-fluid w-100">
+            <a class="navbar-brand" href="#">
+                <h1>commerce</h1>
+            </a>
+            <form class="form-group bg-light rounded-3 d-flex w-50" role="search">
+                <input class="form-control border-0" type="search" placeholder="ürün ara.." aria-label="Search">
+                <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div>
+                <button type="button" onclick="showMyOrder()" data-bs-toggle="modal" data-bs-target="#orderModal"
+                    class="btn btn-outline-dark position-relative">
+                    <i class="fa-solid fa-clipboard-list me-2"></i>
+                    Orders
+                    <span class="badge bg-danger" id="OrderSpanCount" style="display:none;"></span>
+                    </span>
+                </button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#basketModal"
+                    class="btn btn-outline-dark position-relative" onclick="setBasketModalTable()">
+                    <i class="fa-solid fa-basket-shopping me-2"></i>
+                    Basket
                     <span id="basketSpanElement"
                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         <span id="basketcount"></span>
-                        <span class="visually-hidden"></span>
                     </span>
                 </button>
             </div>
         </div>
     </nav>
+    <nav class="navbar navbar-expand-lg justify-content-center bg-light fw-bold">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link text-dark border-end" aria-current="page" href="#">ELECTRONIC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark border-end" aria-current="page" href="#">FASHION</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark border-end" aria-current="page" href="#">ACCESSORY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark border-end" aria-current="page" href="#">SUPERMARKET</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" aria-current="page" href="#">BOOK & HOBBY</a>
+            </li>
+        </ul>
+    </nav>
 
     <!-- CAROUSEL -->
-    <div id="carouselExampleIndicators" class="carousel slide w-70 mx-auto my-5">
+    <div id="carouselExampleIndicators" class="carousel slide w-100 mx-auto">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-dark"
                 aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-dark"
                 aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
+        <div class="carousel-inner bg-warning-subtle">
             <div class="carousel-item active">
-                <img src="https://m.media-amazon.com/images/I/71p3DPqK8qL._AC_SX425_.jpg" class="d-block mx-auto img-fluid"
-                    alt="...">
+                <div class="container">
+                    <div class="row m-5">
+                        <div class="col-4 align-items-center ps-5 my-auto ">
+                            <h1>Bestsellers</h1>
+                            <p>For the month...</p>
+                            <button type="button" class="btn btn-dark rounded-5">Start the Shopping</button>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2015/09/09/17/46/apple-932128_960_720.jpg"
+                            class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
+                    </div>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="https://m.media-amazon.com/images/I/71v0Qf+ih5L._AC_SX425_.jpg" class="d-block mx-auto img-fluid"
-                    alt="...">
+                <div class="container">
+                    <div class="row m-5">
+                        <div class="col-4 align-items-center ps-5 my-auto ">
+                            <h2>20% Discount</h2>
+                            <p>for this Day...</p>
+                            <button type="button" class="btn btn-danger rounded-5">Start the Shopping</button>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2016/04/19/13/39/store-1338629_960_720.jpg"
+                            class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
+                    </div>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="https://m.media-amazon.com/images/I/71BIDGROcwL._AC_SX425_.jpg" class="d-block mx-auto img-fluid"
-                    alt="...">
+                <div class="container">
+                    <div class="row m-5">
+                        <div class="col-4 align-items-center ps-5 my-auto ">
+                            <h1>Supermarket</h1>
+                            <p>ready for shopping</p>
+                            <button type="button" class="btn btn-success rounded-5">Start the Shopping</button>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2018/01/25/08/14/beverages-3105631_960_720.jpg"
+                            class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
     </div>
 
-    <!-- Sidebar + Products -->
+    <!-- Products -->
     <div class="container my-5">
-        <div class="row">
-            <!-- SIDEBAR -->
-            <div class="col-2 bg-warning h-50">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <p class="nav-link active text-dark border-bottom border-3" aria-current="page" href="#">
-                            KATEGORİLER</p>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Elektronik</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Giyim</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Ev Yaşam</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Çok Satan Ürünler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Son Kalan Ürünler</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="container col-10 text-center" id="product">
-
-                <!-- PRODUCT CARDS -->
-            </div>
-
-
+        <h1 class="border-bottom border-danger-subtle border-3 mb-5 p-2 text-danger-emphasis">Electronic</h1>
+        <div class="container row text-center" id="productElectronic">
+            <!-- ElECTRONICS PRODUCT CARDS -->
+        </div>
+        <h1 class="border-bottom border-danger-subtle border-3 mb-5 p-2 text-danger-emphasis">Fashion</h1>
+        <div class="container row text-center" id="productFashion">
+            <!-- ElECTRONICS PRODUCT CARDS -->
+        </div>
+        <h1 class="border-bottom border-danger-subtle border-3 mb-5 p-2 text-danger-emphasis">Accessory</h1>
+        <div class="container row text-center" id="productAccessory">
+            <!-- ElECTRONICS PRODUCT CARDS -->
+        </div>
+        <h1 class="border-bottom border-danger-subtle border-3 mb-5 p-2 text-danger-emphasis">Supermarket</h1>
+        <div class="container row text-center" id="productSupermarket">
+            <!-- ElECTRONICS PRODUCT CARDS -->
+        </div>
+        <h1 class="border-bottom border-danger-subtle border-3 mb-5 p-2 text-danger-emphasis">Book & Hobby</h1>
+        <div class="container row text-center" id="productHobby">
+            <!-- ElECTRONICS PRODUCT CARDS -->
         </div>
     </div>
 
@@ -228,7 +247,8 @@
 
     <!-- Footer -->
     <div class="card-footer bg-warning py-4 text-center">
-        <footer class="blockquote-footer my-auto h1 fs-5">Created by <cite title="Source Title"> <a target="_blank" href="https://ozgevuralkoca.github.io/"> ozgevuralkoca </a>
+        <footer class="blockquote-footer my-auto h1 fs-5">Created by <cite title="Source Title"> <a target="_blank"
+                    href="https://ozgevuralkoca.github.io/"> ozgevuralkoca </a>
             </cite> | 2023
         </footer>
     </div>
