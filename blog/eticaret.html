@@ -47,9 +47,9 @@
                 <input class="form-control border-0" type="search" placeholder="ürün ara.." aria-label="Search">
                 <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-            <div>
+            <div class="col-md-3">
                 <button type="button" onclick="showMyOrder()" data-bs-toggle="modal" data-bs-target="#orderModal"
-                    class="btn btn-outline-dark position-relative">
+                    class="btn btn-outline-dark position-relative my-2">
                     <i class="fa-solid fa-clipboard-list me-2"></i>
                     Orders
                     <span class="badge bg-danger" id="OrderSpanCount" style="display:none;"></span>
@@ -88,69 +88,68 @@
     </nav>
 
     <!-- CAROUSEL -->
-    <div id="carouselExampleIndicators" class="carousel slide w-100 mx-auto">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-dark"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-dark"
-                aria-label="Slide 3"></button>
+        <div id="carouselExampleIndicators" class="carousel slide w-100 mx-auto">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-dark"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-dark"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner bg-warning-subtle">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row m-5">
+                            <div class="col-4 align-items-center ps-5 my-auto ">
+                                <h1>Bestsellers</h1>
+                                <p>For the month...</p>
+                                <button type="button" class="btn btn-dark rounded-5">Start the Shopping</button>
+                            </div>
+                            <img src="https://cdn.pixabay.com/photo/2015/09/09/17/46/apple-932128_960_720.jpg"
+                                class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row m-5">
+                            <div class="col-4 align-items-center ps-5 my-auto ">
+                                <h2>20% Discount</h2>
+                                <p>for this Day...</p>
+                                <button type="button" class="btn btn-danger rounded-5">Start the Shopping</button>
+                            </div>
+                            <img src="https://cdn.pixabay.com/photo/2016/04/19/13/39/store-1338629_960_720.jpg"
+                                class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row m-5">
+                            <div class="col-4 align-items-center ps-5 my-auto ">
+                                <h1>Supermarket</h1>
+                                <p>ready for shopping</p>
+                                <button type="button" class="btn btn-success rounded-5">Start the Shopping</button>
+                            </div>
+                            <img src="https://cdn.pixabay.com/photo/2018/01/25/08/14/beverages-3105631_960_720.jpg"
+                                class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="carousel-inner bg-warning-subtle">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row m-5">
-                        <div class="col-4 align-items-center ps-5 my-auto ">
-                            <h1>Bestsellers</h1>
-                            <p>For the month...</p>
-                            <button type="button" class="btn btn-dark rounded-5">Start the Shopping</button>
-                        </div>
-                        <img src="https://cdn.pixabay.com/photo/2015/09/09/17/46/apple-932128_960_720.jpg"
-                            class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row m-5">
-                        <div class="col-4 align-items-center ps-5 my-auto ">
-                            <h2>20% Discount</h2>
-                            <p>for this Day...</p>
-                            <button type="button" class="btn btn-danger rounded-5">Start the Shopping</button>
-                        </div>
-                        <img src="https://cdn.pixabay.com/photo/2016/04/19/13/39/store-1338629_960_720.jpg"
-                            class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row m-5">
-                        <div class="col-4 align-items-center ps-5 my-auto ">
-                            <h1>Supermarket</h1>
-                            <p>ready for shopping</p>
-                            <button type="button" class="btn btn-success rounded-5">Start the Shopping</button>
-                        </div>
-                        <img src="https://cdn.pixabay.com/photo/2018/01/25/08/14/beverages-3105631_960_720.jpg"
-                            class="d-block mx-auto img-fluid w-50 rounded-5" alt="...">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-    </div>
 
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     <!-- Products -->
     <div class="container my-5">
         <h1 class="border-bottom border-danger-subtle border-3 mb-5 p-2 text-danger-emphasis">Electronic</h1>
