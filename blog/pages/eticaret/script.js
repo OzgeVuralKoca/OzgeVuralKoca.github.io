@@ -39,9 +39,6 @@ function showProducts() {
         </div>
         `
 
-
-
-
         if (products[i].category === "electronics") {
             electronicsElement += element
         } else if (products[i].category === "jewelery") {
