@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+.main {
+    height: 100vh;
+    background-color: #db8c16;
+}
+
+.calc {
+    width: 300px;
+    transform: translate(50%, 50%
+    );
+    padding: 50px 30px;
+    background-color: #0f0f0f;
+    border-radius: 5px;
+    bottom: 50%;
+    right: 50%;
+    position: absolute;
+    box-shadow: 5px 5px 1px 1px #302e2ece;
+}
+
+.calc .screen input {
+    width: 100%;
+    height: 45px;
+    background-color:#313030;
+    border-style: none;
+    color: #ffffff;
+    font-size: 2em;
+    border-radius: 5px;
+    padding: 0 10px;
+    text-align: end;
+    font-size: 600;
+}
+
+.calc .screen input::placeholder {
+    color: #a19b9b;
+}
+
+.buttons {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.calc .buttons input{
+    background-color:#fcfcfc17;
+    color: #ffffff;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 1.5em;
+    border-style: none;
+    margin: 3px;
+    box-shadow: 2px 2px 1px 1px #ffffff7e;
+}
+
+.calc .buttons input:hover {
+    background-color:#fcfcfc3d;
+}
+
+.calc .buttons input#zero {
+    grid-column: span 2;
+}
+
+.calc .buttons input#equal {
+    grid-row: span 2;
+    background-color: #db8c16;
+    color: #0f0f0f;
+}
+
+.calc .buttons input#equal:hover {
+    background-color: #db8c16e0;
+}

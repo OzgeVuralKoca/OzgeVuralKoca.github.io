@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Agenda</title>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/630dbfc933.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./pages/miniagenda/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="row">
+            <div class="col-3">
+                <!-- CLOCK -->
+                <div class="clockBox">
+                    <div class="shape1"></div>
+                    <div class="shape2"></div>
+                    <div class="shape3"></div>
+                    <div class="shape4"></div>
+                    <div class="clock">
+                        <div id="day"></div>
+                        <div id="time"></div>
+                    </div>
+                </div>
+                <!-- Weather App -->
+                <div class="app">
+                    <div class="header">
+                        <h1>Hava Durumu</h1>
+                        <input type="text" id="searchBar" placeholder="Şehir Giriniz..">
+                    </div>
+                    <div class="content">
+                        <div class="city">İstanbul, TR</div>
+                        <div class="temp">--°C</div>
+                        <div class="desc"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <!-- To do list -->
+                <h1 class="todo">Günlük Yapılacaklar</h1>
+                <div id="new-task">
+                    <input type="text" placeholder="Ne yapacaksın?" value="" id="input">
+                    <button id="push">Ekle</button>
+                </div>
+                <h3 class="todolisttext">Görev Listesi</h3>
+                <div id="tasks"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div style="text-align: center; padding: 20px 0;">
+        <h3>Created By <a target="_blank" href="https://ozgevuralkoca.github.io/">ozgevuralkoca</a> | © 2023 All rights reserved</h3>
+    </div>
+ 
+
+    <script src="./pages/miniagenda/script.js"></script>
+</body>
+
+</html>

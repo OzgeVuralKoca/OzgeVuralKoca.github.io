@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(150deg,
+            rgb(30, 161, 161),
+            rgb(24, 152, 202));
+}
+
+.container {
+    width: 800px;
+    background-color: #ffffff50;
+    transform: translate(-50%,
+            -50%);
+    left: 50%;
+    top: 50%;
+    position: relative;
+    height: 600px;
+}
+
+.stick1,
+.stick2 {
+
+    height: 80%;
+    width: 0;
+    position: absolute;
+    top: 10%;
+}
+
+.stick1 {
+    left: 10%;
+    border: 5px solid #ffffff;
+}
+
+.stick2 {
+    right: 10%;
+    border: 5px solid #063974;
+}
+
+.ball1,
+.ball2 {
+    width: 6%;
+    height: 8%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.ball1 {
+    top: 25%;
+    left: 11%;
+    background-color: #ffffff;
+}
+
+.ball2 {
+    bottom: 25%;
+    right: 11%;
+    background-color: #063974
+}
+
+button.start {
+    position: absolute;
+    bottom: 5%;
+    right: 60%;
+    width: 80px;
+    height: 40px;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: rgb(24, 152, 202);
+    border-style: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 1px 3px 5px #c4bfbf;
+    cursor: pointer;
+}
+
+button.stop {
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+    width: 80px;
+    height: 40px;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: rgb(24, 152, 202);
+    border-style: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 1px 3px 5px #c4bfbf;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003046;
+}
+
+/* *** */
