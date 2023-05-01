@@ -1,0 +1,262 @@
+[
+    {
+        "image":"./images/ForrestGump.jpg",
+        "id": 1,
+        "kind":"movie",
+        "title":"Forrest Gump",
+        "genres":"Romance",
+        "description":"1994 | 7+ | 142m",
+        "cast":"Tom Hanks, Robin Wright, Gary Sinise",
+        "trailer":"https://www.youtube.com/watch?v=bLvqoHBptjg&t=1s"
+    },
+    {
+        "image":"./images/TheGreenMile.jpg",
+        "id": 2,
+        "kind":"movie",
+        "title":"Green Mile",
+        "genres":"Crime",
+        "description":"1999 | 18+ | 189m",
+        "cast":"Tom Hanks, Michael Clarke Duncan, David Morse",
+        "trailer":"https://www.youtube.com/watch?v=Bg7epsq0OIQ"
+    },
+    {
+        "image":"./images/Titanic.jpg",
+        "id": 3,
+        "kind":"movie",
+        "title":"Titanic",
+        "genres":"Romance",
+        "description":"1997 | 13+ | 194m",
+        "cast":"Leonardo DiCaprio, Kate Winslet, Billy Zane",
+        "trailer":"https://www.youtube.com/watch?v=CHekzSiZjrY"
+    },
+    {
+        "image":"./images/VForVendetta.jpg",
+        "id": 4,
+        "kind":"movie",
+        "title":"V For Vendetta",
+        "genres":"Action",
+        "description":"2005 | 15+ | 132m",
+        "cast":"Hugo Weaving, Natalie Portman, Rupert Graves",
+        "trailer":"https://www.youtube.com/watch?v=lSA7mAHolAw"
+    },
+    {
+        "image":"./images/AnneWithAnE.jpg",
+        "id": 5,
+        "kind":"tv series",
+        "title":"Anne with An E",
+        "genres":"Family",
+        "description":"2017-2019 | 7+ | 60m",
+        "cast":"Amybeth McNulty, Geraldine James, R.H. Thomson",
+        "trailer":"https://www.youtube.com/watch?v=S5qJXYNNINo"
+    },
+    {
+        "image":"./images/BlackMirror.jpg",
+        "id": 6,
+        "kind":"tv series",
+        "title":"Black Mirror",
+        "genres":"Mystery",
+        "description":"2017-2019 | 7+ | 60m",
+        "cast":"Daniel Lapaine, Hannah John-Kamen, Michaela Coel",
+        "trailer":"https://www.youtube.com/watch?v=jROLrhQkK78"
+    },
+    {
+        "image":"./images/dexter.jpg",
+        "id": 7,
+        "kind":"tv series",
+        "title":"Dexter",
+        "genres":"Crime",
+        "description":"2006-2013 | 13+ | 53m",
+        "cast":"Michael C. Hall, Jennifer Carpenter, David Zayas",
+        "trailer":"https://www.youtube.com/watch?v=YQeUmSD1c3g"
+    },
+    {
+        "image":"./images/Dr.HouseM.D..jpg",
+        "id": 8,
+        "kind":"tv series",
+        "title":"House M.D.",
+        "genres":"Mystery",
+        "description":"2004-2012 | 16+ | 44m",
+        "cast":"Hugh Laurie, Omar Epps, Robert Sean Leonard",
+        "trailer":"https://www.youtube.com/watch?v=64LGOCKxTdE"
+    },
+    {
+        "image":"./images/familyguy.jpg",
+        "id": 9,
+        "kind":"tv series",
+        "title":"Family Guy",
+        "genres":"Comedy",
+        "description":"1999- | 15+ | 22m",
+        "cast":"Seth MacFarlane, Alex Borstein, Seth Green",
+        "trailer":"https://www.youtube.com/watch?v=64LGOCKxTdE"
+    },
+    {
+        "image":"./images/HarryPotterandtheChamberofSecrets.jpg",
+        "id": 10,
+        "kind":"movie",
+        "title":"Harry Potter and the Chamber of Secrets",
+        "genres":"Fantasy",
+        "description":"2002 | 13+ | 161m",
+        "cast":"Daniel Radcliffe, Rupert Grint, Emma Watson",
+        "trailer":"https://www.youtube.com/watch?v=Ngz1RG51RT0"
+    },
+    {
+        "image":"./images/HarryPotterandtheDeathlyHallowsPart1.jpg",
+        "id": 11,
+        "kind":"movie",
+        "title":"Harry Potter and the Deathly Hallows: Part 1",
+        "genres":"Fantasy",
+        "description":"2010 | 13+ | 146m",
+        "cast":"Daniel Radcliffe, Rupert Grint, Emma Watson",
+        "trailer":"https://www.youtube.com/watch?v=-L-z8VNbrcU"
+    },
+    {
+        "image":"./images/HarryPotterandtheDeathlyHallowsPart2.jpg",
+        "id": 12,
+        "kind":"movie",
+        "title":"Harry Potter and the Deathly Hallows: Part 2",
+        "genres":"Fantasy",
+        "description":"2011 | 16+ | 130m",
+        "cast":"Daniel Radcliffe, Rupert Grint, Emma Watson",
+        "trailer":"https://www.youtube.com/watch?v=5NYt1qirBWg"
+    },
+    {
+        "image":"./images/HarryPotterandtheGobletofFire.jpg",
+        "id": 13,
+        "kind":"movie",
+        "title":"Harry Potter and the Goblet of Fire",
+        "genres":"Fantasy",
+        "description":"2005 | 13+ | 157m",
+        "cast":"Daniel Radcliffe, Rupert Grint, Emma Watson",
+        "trailer":"https://www.youtube.com/watch?v=3EGojp4Hh6I"
+    },
+    {
+        "image":"./images/HarryPotterandtheHalf-BloodPrince.jpg",
+        "id": 14,
+        "kind":"movie",
+        "title":"Harry Potter and the Half-Blood Prince",
+        "genres":"Fantasy",
+        "description":"2009 | 16+ | 153m",
+        "cast":"Daniel Radcliffe, Rupert Grint, Emma Watson",
+        "trailer":"https://www.youtube.com/watch?v=tAiy66Xrsz4"
+    },
+    {
+        "image":"./images/HarryPotterandtheOrderofthePhoenix.jpg",
+        "id": 15,
+        "kind":"movie",
+        "title":"Harry Potter and the Order of the Phoenix",
+        "genres":"Fantasy",
+        "description":"2007 | 13+ | 138m",
+        "cast":"Daniel Radcliffe, Rupert Grint, Emma Watson",
+        "trailer":"https://www.youtube.com/watch?v=y6ZW7KXaXYk"
+    },
+    {
+        "image":"./images/hpss.jpg",
+        "id": 16,
+        "kind":"movie",
+        "title":"Harry Potter and the Sorcerer's Stone",
+        "genres":"Fantasy",
+        "description":"2001 | 7+ | 152m",
+        "cast":"Daniel Radcliffe, Rupert Grint, Emma Watson",
+        "trailer":"https://www.youtube.com/watch?v=VyHV0BRtdxo"
+    },
+    {
+        "image":"./images/HarryPotterAndThePrisonerOfAzkaban.jpg",
+        "id": 17,
+        "kind":"movie",
+        "title":"Harry Potter and the Prisoner of Azkaban",
+        "genres":"Fantasy",
+        "description":"2004 | 13+ | 142m",
+        "cast":"Daniel Radcliffe, Rupert Grint, Emma Watson",
+        "trailer":"https://www.youtube.com/watch?v=lAxgztbYDbs"
+    },
+    {
+        "image":"./images/himym.jpg",
+        "id": 18,
+        "kind":"tv series",
+        "title":"How I Met Your Mother",
+        "genres":"Comedy",
+        "description":"2005-2014 | 16+ | 22m",
+        "cast":"Josh Radnor, Jason Segel, Cobie Smulders",
+        "trailer":"https://www.youtube.com/watch?v=cjJLEYMzpjc"
+    },
+    {
+        "image":"./images/seinfeld.jpg",
+        "id": 19,
+        "kind":"tv series",
+        "title":"Seinfeld",
+        "genres":"Comedy",
+        "description":"1989-1998 | G | 22m",
+        "cast":"Jerry Seinfeld, Julia Louis-Dreyfus, Michael Richards",
+        "trailer":"https://www.youtube.com/watch?v=hQXKyIG_NS4"
+    },
+    {
+        "image":"./images/StarTrek1966.jpg",
+        "id": 20,
+        "kind":"tv series",
+        "title":"Star Trek",
+        "genres":"Fantasy",
+        "description":"1966-1969 | 7+ | 50m",
+        "cast":"William Shatner, Leonard Nimoy, DeForest Kelley",
+        "trailer":"https://www.youtube.com/watch?v=nPDb5wX4H7I"
+    },
+    {
+        "image":"./images/StarWarsEpisode1.jpg",
+        "id": 21,
+        "kind":"movie",
+        "title":"Star Wars: Episode I - The Phantom Menace",
+        "genres":"Fantasy",
+        "description":"1999 | 7+ | 136m",
+        "cast":"Ewan McGregor, Liam Neeson, Natalie Portman",
+        "trailer":"https://www.youtube.com/watch?v=bD7bpG-zDJQ"
+    },
+    {
+        "image":"./images/StarWarsEpisode2.jpg",
+        "id": 22,
+        "kind":"movie",
+        "title":"Star Wars: Episode II - Attack of the Clones",
+        "genres":"Fantasy",
+        "description":"2002 | 7+ | 142m",
+        "cast":"Hayden Christensen, Liam Neeson, Natalie Portman",
+        "trailer":"https://www.youtube.com/watch?v=gYbW1F_c9eM"
+    },
+    {
+        "image":"./images/StarWarsEpisode3.jpg",
+        "id": 23,
+        "kind":"movie",
+        "title":"Star Wars: Episode III - Revenge of the Sith",
+        "genres":"Fantasy",
+        "description":"2005 | 7+ | 140m",
+        "cast":"Hayden Christensen, Natalie Portman, Ewan McGregor",
+        "trailer":"https://www.youtube.com/watch?v=5UnjrG_N8hU"
+    },
+    {
+        "image":"./images/got.jpg",
+        "id": 24,
+        "kind":"movie",
+        "title":"Game of Thrones",
+        "genres":"Action",
+        "description":"2011-2019 | 18+ | 57m",
+        "cast":"Emilia Clarke, Peter Dinklage, Kit Harington",
+        "trailer":"https://www.youtube.com/watch?v=KPLWWIOCOOQ"
+    },
+    {
+        "image":"./images/Inception.jpg",
+        "id": 25,
+        "kind":"movie",
+        "title":"Inception",
+        "genres":"Action",
+        "description":"2010 | 13+ | 148m",
+        "cast":"Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "trailer":"https://www.youtube.com/watch?v=YoHD9XEInc0"
+    },
+    {
+        "image":"./images/friends.jpg",
+        "id": 26,
+        "kind":"tv series",
+        "title":"Friends",
+        "genres":"Comedy",
+        "description":"1994-2004 | 7+ | 22m",
+        "cast":"Jennifer Aniston, Courteney Cox, Lisa Kudrow",
+        "trailer":"https://www.youtube.com/watch?v=IEEbUzffzrk"
+    }
+]
