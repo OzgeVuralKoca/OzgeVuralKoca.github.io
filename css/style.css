@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+:root {
+    --main-color: #ddd;
+    --text-color: #fff;
+    --bg-color: #222;
+    --second-color: #aaa;
+    --border: #ffffff4b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    font-family: 'Quicksand', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    max-width: 100vh;
+    display: flex;
+    margin: auto;
+}
+
+h1, h2 {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+h3, h4, h5, h6, p, i, span, a, b {
+    color: var(--main-color)
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 21px;
+}
+
+a {
+    text-decoration: none;
+}
+
+span, p, a, b{
+    font-size: 14px;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+.frame {
+    max-width: 1000px;
+    padding: 21px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+header .profil-img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    margin-bottom: 21px;
+}
+
+header .profil-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 21px;
+}
+
+header .profil-info h2 {
+    margin: 0;
+}
+
+header .profil-info h4 {
+    margin-top: 5px;
+}
+
+header .profil-info div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .profil-info div i {
+    margin-right: 3px;
+    margin-bottom: 0;
+}
+
+header .profil-info div i.fa-envelope {
+    font-size: 15px;
+}
+
+header .profil-info div span {
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+main {
+    display: flex;
+}
+
+.about {
+    padding-bottom: 21px;
+    border-bottom: 1px solid var(--border);
+}
+
+.about p {
+    margin-bottom: 0;
+}
+
+.col {
+    display: flex;
+    padding-bottom: 21px;
+}
+
+.row1 {
+    width: 30%;
+    padding-right: 21px;
+    border-right: 1px solid var(--border);
+}
+
+.row2 {
+    width: 70%;
+    padding-left: 21px;
+}
+
+.col h4 {
+    margin-top: 0;
+}
+
+.education {
+    padding-bottom: 21px;
+    border-bottom: 1px solid var(--border);
+}
+
+.education span i {
+    color: var(--second-color);
+}
+.skills {
+    padding-top: 21px;
+}
+
+.skills div p {
+    margin: 10px 0 5px 0;
+
+}
+
+.skills .level1 {
+    width: 150px;
+    height: 5px;
+    background: var(--main-color) 75%;
+}
+
+.skills .level2 {
+    width: 150px;
+    height: 5px;
+    background: linear-gradient( to right,
+        var(--main-color) 75%,
+        var(--border) 25%
+    )  ;
+}
+
+.skills .level3 {
+    width: 150px;
+    height: 5px;
+    background: linear-gradient( to right,
+        var(--main-color) 50%,
+        var(--border) 50%
+    )  ;
+}
+
+.details, .certificate {
+    padding-bottom: 21px;
+    border-bottom: 1px solid var(--border);
+}
+
+.details div span {
+    color: var(--second-color);
+}
+
+.certificate .cert-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.certificate .space {
+    margin-left: 15px;
+    
+}
+
+.works, .certificate {
+    padding-top: 21px;
+}
+
+.works p {
+    color: var(--second-color);
+    margin: 0;
+    margin-top: 15px;
+}
