@@ -137,7 +137,7 @@ main {
 }
 
 .education {
-    padding-top: 21px;
+    padding-top: 21px !important;
     padding-bottom: 21px;
     border-bottom: 1px solid var(--border);
 }
@@ -179,7 +179,7 @@ main {
 }
 
 .details {
-    padding-top: 21px;
+    padding-top: 21px !important;
 }
 
 .details, .certificate {
