@@ -118,6 +118,7 @@ main {
 
 .col {
     display: flex;
+    padding-top: 21px;
     padding-bottom: 21px;
 }
 
