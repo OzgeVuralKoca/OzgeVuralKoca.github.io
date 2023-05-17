@@ -118,8 +118,7 @@ main {
 
 .col {
     display: flex;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    
 }
 
 .row1 {
@@ -138,6 +137,7 @@ main {
 }
 
 .education {
+    padding-top: 21px;
     padding-bottom: 21px;
     border-bottom: 1px solid var(--border);
 }
@@ -176,6 +176,10 @@ main {
         var(--main-color) 50%,
         var(--border) 50%
     )  ;
+}
+
+.details {
+    padding-top: 21px;
 }
 
 .details, .certificate {
